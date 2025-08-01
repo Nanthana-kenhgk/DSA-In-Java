@@ -1,6 +1,6 @@
 /*
-- This is the code for implementation of the singly linked list code
-- Use this file for testing the singly linked list code
+- This is the code for implementation of the singly linked list class
+- Use this file for testing the code of singly linked list
 */
 package linkedLists;
 import java.util.*;
