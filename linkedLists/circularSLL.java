@@ -1,4 +1,4 @@
-package llinkedLists;
+package linkedLists;
 /*  circular singly linked list
 * This class implements a circular singly linked list where:
  * - The last node points back to the head
