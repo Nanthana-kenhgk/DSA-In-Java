@@ -98,12 +98,7 @@ public class SLL {
   // Checks if the list is empty and returns true or false
   //Time Complexity is O(1)
 	public boolean isEmpty() {
-		if(this.size>0) {
-			return false;
-		}
-		else {
-			return true;
-		}
+		return this.size==0;
 	}
   // Returns the current size of the list
   //Time Complexity is O(1)
