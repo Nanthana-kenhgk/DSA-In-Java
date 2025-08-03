@@ -12,7 +12,7 @@ class Node{
 		this.next = null;
 	}
 }
-public class SLL {
+public class SinglyLinkedList {
 	private Node head;       // Points to the first node in the list
 	private int size = 0;    // Tracks the number of nodes in the list
   // Inserts a node at the beginning of the list
@@ -65,12 +65,10 @@ public class SLL {
 		if(size==0) {
 			throw new RuntimeException("Empty list");
 		}
-		else {
-			int deleted = this.head.data;
-			this.head = head.next;
-			size--;
-			return deleted;
-		}
+		int deleted = this.head.data;
+		this.head = head.next;
+		size--;
+		return deleted;
 	}
   // Deletes and returns the last node in the list
   //Time Complexity is O(n)
@@ -78,22 +76,21 @@ public class SLL {
 		if(size==0) {
 			throw new RuntimeException("Empty list");
 		}
-		else if(size==1) {
-			int deleted = head.data;
+		int deleted;
+		if(size==1) {
+			deleted = head.data;
 			this.head = null;
-			size--;
-			return deleted;
 		}
 		else {
 			Node current = this.head;
 			while(current.next.next!=null) {
 				current = current.next;
 			}
-			int deleted = current.next.data;
+			deleted = current.next.data;
 			current.next = null;
-			size--;
-			return deleted;
 		}
+		size--;
+	        return deleted;
 	}
   // Checks if the list is empty and returns true or false
   //Time Complexity is O(1)
