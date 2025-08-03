@@ -1,3 +1,8 @@
+/*
+- Doubly Linked List
+- This is the code for a doubly linked list using two pointers (head and tail)
+- Operations: insertAtFirst, insertAtLast, insertAfter, deleteFirst, deleteLast, display, reverse
+*/
 package linkedLists;
 class Node{
 	int data;
