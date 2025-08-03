@@ -8,7 +8,7 @@ public class SLLimplementation {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		SLL sll = new SinglyLinkedList();
+		SinglyLinkedList sll = new SinglyLinkedList();
 		String command;
 		System.out.println("Enter the below commands for operations (x - data, t - target):");
 		System.out.println("IF x - insert first\nIL x - insert last\nIA t x - insert after\nDF - delete first\nDL - delete last\nI - isEmpty\nS - size\nD - display\nE -exit");
