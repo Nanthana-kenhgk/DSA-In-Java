@@ -93,7 +93,7 @@ public class CircularDLL {
 			head.prev = this.tail;
 			tail.next = this.head;
 		}
-   		 size--;
+   		size--;
 		return deleted;
 	}
   	// time complexity O(1)
