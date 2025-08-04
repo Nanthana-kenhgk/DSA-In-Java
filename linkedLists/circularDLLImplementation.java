@@ -1,3 +1,7 @@
+/*
+- This is the code for implementation of the circular doubly linked list class
+- Use this file for testing the code of circular doubly linked list
+*/
 package linkedLists;
 
 import java.util.Scanner;
