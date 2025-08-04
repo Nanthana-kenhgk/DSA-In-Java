@@ -1,13 +1,11 @@
 /*  circular doubly linked list
- * This implements a circular doubly linked list data structure
- * The tail node's next pointer points to the head and the head 
- * node's prev pointer points to the tail
- * The variables used are:
- * - head and tail of type Node referring to the first and last nodes
- * - size of type int
- * - node class has: 
- *   - next and prev to store the memory address of the next and 
- *     previous node respectively
+* This class implements a circular doubly linked list where:
+ * - The last node points back to the head
+ * - Each node contains a reference to the next node and a reference to the previous node
+ * Key Fields:
+ * - head: reference to the first node
+ * - tail: reference to the last node
+ * - size: number of nodes in the list
  */
 package linkedLists;
 class Node{
@@ -22,7 +20,7 @@ class Node{
 public class CircularDLL {
 	private Node head, tail;
 	private int size;
-  // time complexity O(1)
+  	// time complexity O(1)
 	public void insertAtFirst(int data) {
 		Node new_node = new Node(data);
 		if(size==0) {
@@ -39,7 +37,7 @@ public class CircularDLL {
 		}
 		size++;
 	}
-  // time complexity O(1)
+  	// time complexity O(1)
 	public void insertAtLast(int data) {
 		Node new_node = new Node(data);
 		if(size==0) {
@@ -56,7 +54,7 @@ public class CircularDLL {
 		}
 		size++;
 	}
-  // time complexity O(n)
+  	// time complexity O(n)
 	public void insertAfter(int target, int data) {
 		if(size==0) {
 			System.out.println("Empty list");
@@ -81,12 +79,12 @@ public class CircularDLL {
 		while(current!=this.head);
 		System.out.println("Target not found");
 	}
-  // time complexity O(1)
+ 	 // time complexity O(1)
 	public int deleteFirst() {
 		if(size==0) {
 			throw new RuntimeException("Empty list");
 		}
-    int deleted = head.data;
+    		int deleted = head.data;
 		if(size==1) {
 			this.head = this.tail = null;
 		}
@@ -95,16 +93,16 @@ public class CircularDLL {
 			head.prev = this.tail;
 			tail.next = this.head;
 		}
-    size--;
+   		 size--;
 		return deleted;
 	}
-  // time complexity O(1)
+  	// time complexity O(1)
 	public int deleteLast() {
 		if(size==0) {
 			throw new RuntimeException("Empty list");
 		}
-    int deleted = tail.data;
-		else if(size==1) {
+    		int deleted = tail.data;
+		if(size==1) {
 			this.head = this.tail = null;
 		}
 		else {
@@ -112,18 +110,18 @@ public class CircularDLL {
 			tail.next = this.head;
 			head.prev = this.tail;
 		}
-    size--;
+    		size--;
 		return deleted;
 	}
-  // time complexity O(1)
+  	// time complexity O(1)
 	public boolean isEmpty() {
 		return this.size==0;
 	}
-  // time complexity O(1)
+  	// time complexity O(1)
 	public int listSize() {
 		return this.size;
 	}
-  // time complexity O(n)
+  	// time complexity O(n)
 	public void display() {
 		if(size==0) {
 			System.out.println("Empty list");
@@ -138,7 +136,7 @@ public class CircularDLL {
 			System.out.println();
 		}
 	}
-  // time complexity O(n)
+  	// time complexity O(n)
 	public void reverse() {
 		if(size==0) {
 			return;
