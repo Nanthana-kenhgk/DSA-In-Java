@@ -4,6 +4,14 @@
 - Operations: push, pop, top, isEmpty, size
 */
 package llinkedLists;
+class Node {
+	int data;
+	Node next;
+	Node(int data) {
+		this.data = data;
+		this.next = null;
+	}
+}
 public class Stack {
 	private Node head;
 	private int length;
