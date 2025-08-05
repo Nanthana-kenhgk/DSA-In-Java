@@ -1,3 +1,7 @@
+/*
+- This is the code for implementation of stack
+- Use this file for testing the code of stack
+*/
 package llinkedLists;
 import java.util.Scanner;
 
