@@ -1,6 +1,7 @@
 /*
 - This is the code for implementation of stack
 - Use this file for testing the code of stack
+- Change the type/class name according to the stack implementation you want to test
 */
 package llinkedLists;
 import java.util.Scanner;
@@ -9,7 +10,7 @@ public class StackImplementation {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		Stack s = new Stack();
+		Stack s = new Stack();       // Change this line to test different implementations (e.g., stackCircularSLL)
 		String command;
 		System.out.println("Enter the below commands for operations (x - data):");
 		System.out.println("PUSH x - insert\nPOP - delete\nTOP - show top element\nI - isEmpty\nS - size\nE -exit");
