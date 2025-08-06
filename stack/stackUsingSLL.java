@@ -3,7 +3,7 @@
 - This is the code for a stack using singly linked list
 - Operations: push, pop, top, isEmpty, size
 */
-package llinkedLists;
+package linkedLists;
 class Node {
 	int data;
 	Node next;
